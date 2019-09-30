@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+
+<equipments>
+
+  <equipment ID="01" className="Equipment_PlateArmor"/>
+  <equipment ID="02" className="Equipment_KnightsShield"/>
+  <equipment ID="03" className="Equipment_DragonSpear"/>
+  <equipment ID="04" className="Equipment_PlateArmor"/>
+  <equipment ID="05" className="Equipment_PlateArmor"/>
+  <equipment ID="06" className="Equipment_PlateArmor"/>
+
+  <equipment ID="07" className="Equipment_Chainmail"/>
+  <equipment ID="08" className="Equipment_PlateArmor"/>
+  <equipment ID="09" className="Equipment_PlateArmor"/>
+  <equipment ID="10" className="Equipment_PlateArmor"/>
+  <equipment ID="11" className="Equipment_PlateArmor"/>
+  <equipment ID="12" className="Equipment_PlateArmor"/>
+
+</equipments>

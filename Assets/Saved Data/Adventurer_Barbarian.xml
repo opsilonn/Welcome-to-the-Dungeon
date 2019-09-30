@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" ?>
+
+<adventurer name="Barbarian" hp="4">
+  <equipment ID="007"/>
+</adventurer>

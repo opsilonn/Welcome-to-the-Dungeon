@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" ?>
+
+<adventurer name="Warrior" hp="3">
+  <equipment ID="01"/>
+  <equipment ID="02"/>
+  <equipment ID="03"/>
+  <equipment ID="04"/>
+  <equipment ID="05"/>
+  <equipment ID="06"/>
+</adventurer>
