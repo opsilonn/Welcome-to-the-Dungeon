@@ -10,18 +10,17 @@ public class Equipment_KnightsShield : Equipment
 
 
     /// <summary>
-    /// Default constructor of the class <see cref="Equipment_PlateArmor"/>
+    /// Default constructor of the class <see cref="Equipment_KnightsShield"/>
     /// </summary>
     public Equipment_KnightsShield() : base() { }
 
 
     /// <summary>
-    /// The effect actions of this <see cref="Equipment_PlateArmor"/>
+    /// The effect actions of this <see cref="Equipment_KnightsShield"/>
     /// </summary>
-    /// <param name="game"></param>
+    /// <param name="game"> Reference to the current Game </param>
     public override void Effect(Game game)
     {
-        int hp = 3;
-        AddHP(game.adventurer, hp);
+        AddHP(game.adventurer, 3);
     }
 }

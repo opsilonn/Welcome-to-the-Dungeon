@@ -15,9 +15,13 @@ public class Equipment_DragonSpear : Equipment
     public Equipment_DragonSpear() : base() { }
 
 
+    /// <summary>
+    /// The effect actions of this <see cref="Equipment_DragonSpear"/>
+    /// </summary>
+    /// <param name="game"> Reference to the current Game </param>
     public override void Effect(Game game)
     {
         List<int> list = new List<int>( new int[] { 8 } );
-        IgnoreMonsters(game.deck[1], list);
+        IgnoreMonstersIDs(game.deck[1], list);
     }
 }

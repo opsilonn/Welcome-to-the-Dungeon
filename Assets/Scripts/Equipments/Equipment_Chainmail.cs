@@ -10,11 +10,15 @@ public class Equipment_Chainmail : Equipment
 
 
     /// <summary>
-    /// Default constructor of the class <see cref="Equipment_PlateArmor"/>
+    /// Default constructor of the class <see cref="Equipment_Chainmail"/>
     /// </summary>
     public Equipment_Chainmail() : base() { }
 
 
+    /// <summary>
+    /// The effect actions of this <see cref="Equipment_Chainmail"/>
+    /// </summary>
+    /// <param name="game"> Reference to the current Game </param>
     public override void Effect(Game game)
     {
         int hp = 5;

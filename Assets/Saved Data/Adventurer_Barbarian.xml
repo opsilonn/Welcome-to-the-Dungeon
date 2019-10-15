@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
 
-<adventurer name="Barbarian" hp="4">
+<adventurer name="Barbarian" hp="4"  colorR="255" colorG="156" colorB="0">
   <equipment ID="007"/>
 </adventurer>

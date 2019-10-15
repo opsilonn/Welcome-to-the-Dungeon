@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MGMT_Summary : MonoBehaviour
 {
-    private bool resume;
-
     public Main_Game scriptMainGame;
     public Transform container;
     public Transform template;
@@ -21,23 +19,34 @@ public class MGMT_Summary : MonoBehaviour
 
     private void Awake()
     {
-        resume = false;
+        MGMT.resume = false;
         container.gameObject.SetActive(false);
     }
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        switch(MGMT.resume)
         {
-            resume = !resume;
-            container.gameObject.SetActive(resume);
+            case true:
+                if (Input.GetButtonDown("UI") || Input.GetButtonDown("Cancel"))
+                {
+                    MGMT.resume = false;
+                    EffacerTable();
+                    template.gameObject.SetActive(true);
+                    container.gameObject.SetActive(false);
+                }
+            break;
 
-            if (resume)
-                CreerTable();
-            else
-                EffacerTable();
-            template.gameObject.SetActive(!resume);
+            case false:
+                if (Input.GetButtonDown("UI") && !MGMT.pause)
+                {
+                    MGMT.resume = true;
+                    CreerTable();
+                    template.gameObject.SetActive(false);
+                    container.gameObject.SetActive(true);
+                }
+            break;
         }
     }
 

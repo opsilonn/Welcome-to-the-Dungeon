@@ -114,7 +114,7 @@ public abstract class Equipment
     /// </summary>
     /// <param name="currentMonster"> The <see cref="Monster"/> currently facing the <see cref="Player"/> </param>
     /// <param name="monstersIgnored"> List of all the monsters (using their IDs) that are ignored </param>
-    protected void IgnoreMonsters(Monster currentMonster, List<int> monstersIgnored)
+    protected void IgnoreMonstersIDs(Monster currentMonster, List<int> monstersIgnored)
     {
         if (monstersIgnored.Contains(currentMonster.ID))
         {

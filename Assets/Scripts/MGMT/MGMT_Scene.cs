@@ -15,6 +15,16 @@ public class MGMT_Scene : MonoBehaviour
 
 
     /// <summary>
+    /// Launches a scene
+    /// </summary>
+    /// <param name="sceneID"> ID of the scene to launch </param>
+    public void LaunchScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
+    }
+
+
+    /// <summary>
     /// Ends the software
     /// </summary>
     public void LeaveSoftware()

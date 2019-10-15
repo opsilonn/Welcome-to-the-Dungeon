@@ -5,6 +5,7 @@ using UnityEngine;
 public class Game
 {
     private Adventurer _adventurer;
+    private Player _currentPlayer;
     private List<Player> _players;
     private List<Monster> _deck;
     private List<Monster> _dungeon;
@@ -84,12 +85,41 @@ public class Game
 
 
 
+    /// <summary>
+    /// Make the current player exit the Dungeon
+    /// </summary>
+    /// <param name="player"> Reference of the current player </param>
+    public void LeaveDungeon(Player player) => player.plays = false;
+
+
+
+    /// <summary>
+    /// Returns whether or not we keep looping through the players
+    /// </summary>
+    /// <returns> True if there are at least 2 players still playing, else False </returns>
+    public bool KeepTurning()
+    {
+        int cpt = 0;
+        foreach(Player player in players)
+        {
+            if (player.plays)
+                cpt++;
+        }
+
+        return cpt != 1;
+    }
+
 
     // PARAMETERS
     public Adventurer adventurer
     {
         get { return _adventurer; }
         set { _adventurer = value; }
+    }
+    public Player currentPlayer
+    {
+        get { return _currentPlayer; }
+        set { _currentPlayer = value; }
     }
     public List<Player> players
     {

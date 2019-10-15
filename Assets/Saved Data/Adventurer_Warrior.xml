@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" ?>
 
-<adventurer name="Warrior" hp="3">
+<adventurer name="Warrior" hp="3" colorR="105" colorG="212" colorB="255">
   <equipment ID="01"/>
   <equipment ID="02"/>
   <equipment ID="03"/>

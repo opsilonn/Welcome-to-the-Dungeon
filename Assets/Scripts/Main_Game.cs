@@ -1,26 +1,51 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Main_Game : MonoBehaviour
 {
     public TMPro.TMP_Dropdown dropdown;
-
+    public MGMT_AdventurerUI MGMT_AUI;
+    public MGMT_EquipmentUI MGMT_EUI;
     public Game game = new Game();
 
 
-    // Start is called before the first frame update
     void Start()
     {
         dropdown.ClearOptions();
         dropdown.AddOptions(MGMT_Adventurer.GetAdventurersNames());
-        dropdown.onValueChanged.AddListener(delegate { CreateTable(); });
+        dropdown.onValueChanged.AddListener(delegate
+        {
+            SetCurrentAdventurer();
+            CreateTable();
+        });
 
         game.players.Add( new Player() );
         game.players.Add(new Player("Daenerys", 2, 1));
         game.players.Add(new Player("Cersei", 0, 2));
         game.players.Add(new Player("Adam", 1, 2));
+        game.currentPlayer = game.players[0];
 
+        SetCurrentAdventurer();
         CreateTable();
+
+        /*
+        do
+        {
+            foreach (Player player in game.players)
+            {
+                Debug.Log(player.pseudonym);
+            }
+        }
+        while (game.KeepTurning());
+        */
+    }
+
+
+    void Update()
+    {
+       // Debug.Log(game.currentPlayer.plays);
     }
 
 
@@ -86,9 +111,16 @@ public class Main_Game : MonoBehaviour
 
 
 
-    List<Adventurer> adventurers = MGMT_Xml.GetAdventurers();
     Adventurer currentAdventurer
     {
-        get{ return adventurers[dropdown.value]; }
+        get{ return MGMT_Xml.GetAdventurers()[dropdown.value]; }
+    }
+
+
+    public void SetCurrentAdventurer()
+    {
+        game.adventurer = MGMT_Xml.GetAdventurers()[dropdown.value];
+        MGMT_AUI.setUI(game.adventurer);
+        MGMT_EUI.PopulateEquipmentUI(currentAdventurer);
     }
 }

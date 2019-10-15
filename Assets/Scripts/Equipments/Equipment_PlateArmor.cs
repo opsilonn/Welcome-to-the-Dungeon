@@ -15,9 +15,12 @@ public class Equipment_PlateArmor : Equipment
     public Equipment_PlateArmor() : base() { }
 
 
+    /// <summary>
+    /// The effect actions of this <see cref="Equipment_PlateArmor"/>
+    /// </summary>
+    /// <param name="game"> Reference to the current Game </param>
     public override void Effect(Game game)
     {
-        int hp = 5;
-        AddHP(game.adventurer, hp);
+        AddHP(game.adventurer, 5);
     }
 }

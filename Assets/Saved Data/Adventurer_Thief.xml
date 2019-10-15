@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" ?>
 
-<adventurer name="Thief" hp="3">
+<adventurer name="Thief" hp="3" colorR="0" colorG="200" colorB="50">
 </adventurer>

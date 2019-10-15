@@ -89,6 +89,7 @@ public static class MGMT_Xml
         // Setting the default values
         string name = "John DOE";
         int hp = 3;
+        Color32 color = new Color32(255, 255, 255, 255);
         List<Equipment> equipments = new List<Equipment>();
 
 
@@ -102,6 +103,9 @@ public static class MGMT_Xml
                 {
                     name = xmlReader.GetAttribute("name");
                     hp = int.Parse(xmlReader.GetAttribute("hp"));
+                    color.r = Byte.Parse(xmlReader.GetAttribute("colorR"));
+                    color.g = Byte.Parse(xmlReader.GetAttribute("colorG"));
+                    color.b = Byte.Parse(xmlReader.GetAttribute("colorB"));
                 }
                 if (xmlReader.Name == "equipment" && xmlReader.HasAttributes)
                 {
@@ -112,7 +116,7 @@ public static class MGMT_Xml
             }
         }
 
-        return new Adventurer(name, hp, equipments);
+        return new Adventurer(name, hp, equipments, color);
     }
 
 
