@@ -1,34 +1,42 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Main_Game : MonoBehaviour
 {
-    public TMPro.TMP_Dropdown dropdown;
-    public MGMT_AdventurerUI MGMT_AUI;
-    public MGMT_EquipmentUI MGMT_EUI;
-    public Game game = new Game();
+    public TMPro.TMP_Dropdown dropdownAdventurers;
+    public UI_Adventurer UI_adventurer;
+    public Game game;
+    public TextMeshProUGUI textNumberMonster;
 
 
     void Start()
     {
-        dropdown.ClearOptions();
-        dropdown.AddOptions(MGMT_Adventurer.GetAdventurersNames());
-        dropdown.onValueChanged.AddListener(delegate
+        // We set up the dropdown containing all the adventurer's names
+        // We empty the dropdown
+        dropdownAdventurers.ClearOptions();
+        // We add all the adventurer's name
+        dropdownAdventurers.AddOptions(MGMT_Adventurer.GetAdventurersNames());
+        // When the value is changed, we display the corresponding adventurer's UI elements
+        dropdownAdventurers.onValueChanged.AddListener(delegate
         {
             SetCurrentAdventurer();
-            CreateTable();
         });
 
+
+        // We manually add players to the game.
+        game = new Game();
         game.players.Add( new Player() );
         game.players.Add(new Player("Daenerys", 2, 1));
         game.players.Add(new Player("Cersei", 0, 2));
         game.players.Add(new Player("Adam", 1, 2));
         game.currentPlayer = game.players[0];
 
+        // Not implemented correctly yet...
         SetCurrentAdventurer();
-        CreateTable();
+        game.adventurer = MGMT_Xml.GetAdventurers()[0];
 
         /*
         do
@@ -45,82 +53,23 @@ public class Main_Game : MonoBehaviour
 
     void Update()
     {
-       // Debug.Log(game.currentPlayer.plays);
+        // Debug.Log(game.currentPlayer.plays);
+
+        // We display the number of monster(s) in the dungeon. If needed, we display at plural
+        textNumberMonster.text = "Dungeon : " + game.dungeon.Count + " monster";
+        if (game.dungeon.Count > 1)
+            textNumberMonster.text += "s";
     }
 
-
-
-    public Transform container;
-    public Transform template;
-    private float templateHeight = -50f;
-
-    private static readonly string TEXT_EQUIPMENT = "Template_Equipment";
-    private static readonly string TEXT_DESCRIPTION = "Template_Description";
-
-    private List<Transform> transforms = new List<Transform>();
 
 
 
     /// <summary>
-    /// Sets the text accordingly to the equipment of the current adventurer
+    /// Changes the game's Adventurer and sets all the corresponding UI elements
     /// </summary>
-    private void CreateTable()
-    {
-        template.gameObject.SetActive(true);
-        DeleteTable();
-        transforms = new List<Transform>();
-
-        if (currentAdventurer.equipments.Count == 0)
-        {
-            container.Find("Template").Find(TEXT_EQUIPMENT).GetComponent<TMPro.TextMeshProUGUI>().text = "No equipment !!";
-            container.Find("Template").Find(TEXT_DESCRIPTION).GetComponent<TMPro.TextMeshProUGUI>().text = "...Thus, no description";
-        }
-        else
-        {
-            int i = 1;
-            foreach (Equipment equipment in currentAdventurer.equipments)
-                CreateTableRank(equipment, i++);
-
-            template.gameObject.SetActive(false);
-        }
-    }
-
-
-    /// <summary>
-    /// Sets the text of a given rank accordingly to the equipment of the current adventurer
-    /// </summary>
-    private void CreateTableRank(Equipment equipment, int rang)
-    {
-        Transform tableTransform = Instantiate(template, container);
-        RectTransform tableRectTransform = tableTransform.GetComponent<RectTransform>();
-        tableRectTransform.anchoredPosition = new Vector2(0, templateHeight * rang);
-
-        tableTransform.Find(TEXT_EQUIPMENT).GetComponent<TMPro.TextMeshProUGUI>().text = equipment.name;
-        tableTransform.Find(TEXT_DESCRIPTION).GetComponent<TMPro.TextMeshProUGUI>().text = equipment.description;
-
-        transforms.Add(tableTransform);
-    }
-
-
-    private void DeleteTable()
-    {
-        foreach (Transform transform in transforms)
-            Destroy(transform.gameObject, 0);
-    }
-
-
-
-
-    Adventurer currentAdventurer
-    {
-        get{ return MGMT_Xml.GetAdventurers()[dropdown.value]; }
-    }
-
-
     public void SetCurrentAdventurer()
     {
-        game.adventurer = MGMT_Xml.GetAdventurers()[dropdown.value];
-        MGMT_AUI.setUI(game.adventurer);
-        MGMT_EUI.PopulateEquipmentUI(currentAdventurer);
+        game.adventurer = MGMT_Xml.GetAdventurers()[dropdownAdventurers.value];
+        UI_adventurer.setAdventurer(game.adventurer);
     }
 }

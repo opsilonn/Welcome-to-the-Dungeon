@@ -63,45 +63,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9688}
+      Script: {instanceID: 9686}
     - Class: 114
-      Script: {instanceID: 9728}
+      Script: {instanceID: 9726}
     - Class: 114
-      Script: {instanceID: 9776}
+      Script: {instanceID: 9774}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9884}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 9890}
+      Script: {instanceID: 9888}
     - Class: 114
-      Script: {instanceID: 9936}
+      Script: {instanceID: 9934}
     - Class: 114
-      Script: {instanceID: 9984}
+      Script: {instanceID: 9982}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 10094}
     - Class: 114
-      Script: {instanceID: 10112}
+      Script: {instanceID: 10110}
     - Class: 114
-      Script: {instanceID: 10172}
+      Script: {instanceID: 10170}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10260}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10302}
+      Script: {instanceID: 10300}
+    - Class: 114
+      Script: {instanceID: 10422}
     - Class: 114
       Script: {instanceID: 10424}
     - Class: 114
-      Script: {instanceID: 10426}
+      Script: {instanceID: 10602}
     - Class: 114
-      Script: {instanceID: 10604}
+      Script: {instanceID: 10622}
     - Class: 114
-      Script: {instanceID: 10624}
+      Script: {instanceID: 10818}
     - Class: 114
-      Script: {instanceID: 10820}
-    - Class: 114
-      Script: {instanceID: 10952}
+      Script: {instanceID: 10950}
     - Class: 114
       Script: {instanceID: 10998}
     - Class: 114
@@ -162,35 +162,35 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9688}
+      Script: {instanceID: 9686}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9884}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 10094}
     - Class: 114
-      Script: {instanceID: 10172}
+      Script: {instanceID: 10170}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10260}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10280}
+      Script: {instanceID: 10278}
     - Class: 114
-      Script: {instanceID: 10426}
+      Script: {instanceID: 10424}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10454}
     - Class: 114
-      Script: {instanceID: 10604}
+      Script: {instanceID: 10602}
     - Class: 114
-      Script: {instanceID: 10624}
+      Script: {instanceID: 10622}
     - Class: 114
-      Script: {instanceID: 10714}
+      Script: {instanceID: 10712}
     - Class: 114
-      Script: {instanceID: 10820}
+      Script: {instanceID: 10818}
     - Class: 114
-      Script: {instanceID: 10834}
+      Script: {instanceID: 10832}
     - Class: 114
       Script: {instanceID: 10998}
     - Class: 114
@@ -560,6 +560,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Main_Game
+  - hash:
+      serializedVersion: 2
+      Hash: a2ed8f53362aeae0897cfbb4d1ec9ac3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HoverEffectButton
   - hash:
       serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
