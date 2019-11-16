@@ -78,7 +78,6 @@
     <Compile Include="Assets\Scripts\MemberInfoGetting.cs" />
     <Compile Include="Assets\Scripts\MGMT\MGMT.cs" />
     <Compile Include="Assets\Scripts\MGMT\MGMT_Adventurer.cs" />
-    <Compile Include="Assets\Scripts\MGMT\MGMT_EquipmentUI.cs" />
     <Compile Include="Assets\Scripts\MGMT\MGMT_Pause.cs" />
     <Compile Include="Assets\Scripts\MGMT\MGMT_Scene.cs" />
     <Compile Include="Assets\Scripts\MGMT\MGMT_Summary.cs" />
@@ -87,6 +86,7 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\TODELETE_Main.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Adventurer.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Equipment.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

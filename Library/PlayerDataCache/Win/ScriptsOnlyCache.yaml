@@ -4,13 +4,13 @@ ScriptsOnlyBuild:
     - AppuyezSurUneTouche
     - FPS_Counter
     - HoverEffect
-    - MGMT_AdventurerUI
-    - MGMT_EquipmentUI
     - MGMT_Pause
     - MGMT_Scene
     - MGMT_Summary
     - Main_Game
     - TODELETE_Main
+    - UI_Adventurer
+    - UI_Equipment
     Unity.TextMeshPro.dll:
     - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
@@ -63,55 +63,55 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9686}
+      Script: {instanceID: 9688}
     - Class: 114
-      Script: {instanceID: 9726}
+      Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9774}
+      Script: {instanceID: 9776}
     - Class: 114
-      Script: {instanceID: 9844}
+      Script: {instanceID: 9846}
     - Class: 114
-      Script: {instanceID: 9882}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 9888}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 9934}
+      Script: {instanceID: 9936}
     - Class: 114
-      Script: {instanceID: 9982}
+      Script: {instanceID: 9984}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10110}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10170}
+      Script: {instanceID: 10172}
     - Class: 114
-      Script: {instanceID: 10254}
+      Script: {instanceID: 10212}
     - Class: 114
       Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10300}
+      Script: {instanceID: 10262}
     - Class: 114
-      Script: {instanceID: 10422}
+      Script: {instanceID: 10426}
     - Class: 114
-      Script: {instanceID: 10424}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10602}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 10622}
+      Script: {instanceID: 10626}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10822}
     - Class: 114
-      Script: {instanceID: 10950}
+      Script: {instanceID: 10954}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 11002}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 11062}
     - Class: 114
-      Script: {instanceID: 11074}
+      Script: {instanceID: 11078}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 11404}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 11418}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -162,45 +162,45 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9686}
+      Script: {instanceID: 9688}
     - Class: 114
-      Script: {instanceID: 9844}
+      Script: {instanceID: 9846}
     - Class: 114
-      Script: {instanceID: 9882}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10170}
-    - Class: 114
-      Script: {instanceID: 10254}
+      Script: {instanceID: 10172}
     - Class: 114
       Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10278}
+      Script: {instanceID: 10262}
     - Class: 114
-      Script: {instanceID: 10424}
+      Script: {instanceID: 10282}
     - Class: 114
-      Script: {instanceID: 10454}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10602}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 10622}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 10712}
+      Script: {instanceID: 10626}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10716}
     - Class: 114
-      Script: {instanceID: 10832}
+      Script: {instanceID: 10822}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 10836}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 11002}
     - Class: 114
-      Script: {instanceID: 11074}
+      Script: {instanceID: 11062}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11078}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 11208}
+    - Class: 114
+      Script: {instanceID: 11404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -370,10 +370,10 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: f2c768aed892305e2548851921a5c6cd
+      Hash: 926ec25be3665b4ec65805ed2f54825d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MGMT_AdventurerUI
+    className: UI_Adventurer
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -392,6 +392,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 220bd265f54cc4cee8f1539ad2b2c64a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UI_Equipment
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -556,7 +562,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 61b6471552f6272e026df97989e86b87
+      Hash: 1f2f0034ae3170c410bcbb43a87d047f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Main_Game
